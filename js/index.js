@@ -64,6 +64,26 @@ navBar.forEach(function(item, i) {
   item.textContent = navItems[`nav-item-${i}`];
 });
 
+navBar.forEach(function(item) {
+  item.style.color = "#84E2AA";
+});
+
+// ADDED ITEMS \\
+
+let newNavText = document.createElement("a");
+let newText = document.createTextNode("MORE GAINS");
+
+newNavText.appendChild(newText);
+
+document.querySelector("nav").appendChild(newNavText);
+
+let newNavTextTwo = document.createElement("a");
+let newTextTwo = document.createTextNode("GAINS");
+
+newNavTextTwo.prepend(newTextTwo);
+
+document.querySelector("nav").prepend(newNavTextTwo);
+
 // CTA TEXT \\
 
 let text = siteContent["cta"];
